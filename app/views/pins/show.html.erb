@@ -5,6 +5,7 @@
 	  <strong>Post:</strong>
 	  <%= @pin.description %>
 		<%= image_tag @pin.image.url(:medium) %>
+		<p><strong><%= @pin.user.name if @pin.user %></strong></p>
 	</p>
 	<%= link_to 'Back', pins_path %>
 </div>
