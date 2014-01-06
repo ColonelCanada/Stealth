@@ -1,8 +1,9 @@
 Stealth::Application.routes.draw do
-  resources :pins
+  resources :pins, except: [:edit]
 
   devise_for :users
   root "pages#home"
+  get "post" => "pages#post"
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
